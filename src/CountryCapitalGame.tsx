@@ -6,6 +6,9 @@ type ButtonType = { value: string; type: string };
 const CountryCapitalGame = ({ data }: { data: Record<string, string> }) => {
   const [randomisedCountries, setRandomisedCountries] = useState<string[]>([]);
   const [randomisedCapitals, setRandomisedCapitals] = useState<string[]>([]);
+  const [hasWon, setHasWon] = useState(false);
+  const [gameState, setGameState] = useState<"nothing" | "waiting" | "error">("nothing");
+  const [buttonsClicked, setButtonsClicked] = useState<ButtonType[]>([]);
 
   useEffect(() => {
     if (data) {
@@ -13,10 +16,6 @@ const CountryCapitalGame = ({ data }: { data: Record<string, string> }) => {
       setRandomisedCapitals(Object.values(data).sort(() => Math.random() - 0.5));
     }
   }, [data]);
-
-  const [hasWon, setHasWon] = useState(false);
-  const [gameState, setGameState] = useState<"nothing" | "waiting" | "error">("nothing");
-  const [buttonsClicked, setButtonsClicked] = useState<ButtonType[]>([]);
 
   useEffect(() => {
     if (buttonsClicked?.length === 0) return;
