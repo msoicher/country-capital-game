@@ -4,12 +4,16 @@ import GameButton from "./GameButton";
 type ButtonType = { value: string; type: string };
 
 const CountryCapitalGame = ({ data }: { data: Record<string, string> }) => {
-  const [randomisedCountries, setRandomisedCountries] = useState<string[]>(
-    Object.keys(data).sort(() => Math.random() - 0.5)
-  );
-  const [randomisedCapitals, setRandomisedCapitals] = useState<string[]>(
-    Object.values(data).sort(() => Math.random() - 0.5)
-  );
+  const [randomisedCountries, setRandomisedCountries] = useState<string[]>([]);
+  const [randomisedCapitals, setRandomisedCapitals] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (data) {
+      setRandomisedCountries(Object.keys(data).sort(() => Math.random() - 0.5));
+      setRandomisedCapitals(Object.values(data).sort(() => Math.random() - 0.5));
+    }
+  }, [data]);
+
   const [hasWon, setHasWon] = useState(false);
   const [gameState, setGameState] = useState<"nothing" | "waiting" | "error">("nothing");
   const [buttonsClicked, setButtonsClicked] = useState<ButtonType[]>([]);
@@ -34,7 +38,7 @@ const CountryCapitalGame = ({ data }: { data: Record<string, string> }) => {
   }, [buttonsClicked]);
 
   useEffect(() => {
-    if (randomisedCountries.length === 0) setHasWon(true);
+    randomisedCountries.length === 0 ? setHasWon(true) : setHasWon(false);
   }, [randomisedCountries]);
 
   const hasClickedOnSameTile = (value: string, type: string) =>
