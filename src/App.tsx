@@ -1,5 +1,7 @@
 // import { useEffect, useState } from "react";
 import CountryCapitalGame from "./CountryCapitalGame";
+import './App.css'
+import './index.css'
 
 const data = {
   Réunion: "Saint-Denis",

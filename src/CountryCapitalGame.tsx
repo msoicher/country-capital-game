@@ -65,7 +65,7 @@ const CountryCapitalGame = ({ data }: { data: Record<string, string> }) => {
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div>
       {hasWon ? (
         <h1>Congrats! You won</h1>
       ) : (
