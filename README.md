@@ -15,3 +15,9 @@ and its corresponding capital city.
    background color, and the new selected button to blue.
 
 6. When there are no buttons left, display a message: 'Congratulations'
+
+### How to run locally
+1. Clone the repo, cd into it, and run `yarn`
+2. Then, run `yarn run dev` to start the server locally.
+
+Happy matching!
