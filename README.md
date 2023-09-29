@@ -1,27 +1,17 @@
-# React + TypeScript + Vite
+# Country Capital Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A challenge exercised I sourced from [web dev cody](https://www.youtube.com/watch?v=XTgB4esy1is&ab_channel=WebDevCody).
 
-Currently, two official plugins are available:
+## The challenge is as follows: 
+1. A React Component CountryCapitalGame must take in data as a prop - an object containing key-value pairs of countries
+and its corresponding capital city.
+2. A button should be displayed for each country and capital, in a randomised order.
+3. Clicking a button should set its background color to blue.
+4. Clicking another button should:
+   - remove both buttons if its a correct match.
+   - set the background color of both buttons to red if its an incorrect match.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+5. Assuming the previously selected pair was wrong, clicking another button should restore the buttons to its initial
+   background color, and the new selected button to blue.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+6. When there are no buttons left, display a message: 'Congratulations'
