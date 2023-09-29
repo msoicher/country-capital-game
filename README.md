@@ -1,6 +1,7 @@
 # Country Capital Game
 
-A challenge exercised I sourced from [web dev cody](https://www.youtube.com/watch?v=XTgB4esy1is&ab_channel=WebDevCody).
+A challenge exercised I sourced from [Web Dev Cody](https://www.youtube.com/watch?v=XTgB4esy1is&ab_channel=WebDevCody)
+The project is built in React and Typescript, scaffolded with Vite.
 
 ## The challenge is as follows: 
 1. A React Component CountryCapitalGame must take in data as a prop - an object containing key-value pairs of countries
@@ -19,5 +20,7 @@ and its corresponding capital city.
 ### How to run locally
 1. Clone the repo, cd into it, and run `yarn`
 2. Then, run `yarn run dev` to start the server locally.
+
+If you aren't into all that jazz, a live version exists [here](https://country-to-capital.netlify.app/).
 
 Happy matching!
