@@ -27,8 +27,18 @@ function App() {
     getData();
   }, []);
 
+  const refresh = () => {
+    getData();
+  };
+
   return (
     <div className="w-full text-center align-center m-auto">
+      <h1>Country to Capital Quiz</h1>
+      <button onClick={refresh} style={{ backgroundColor: "grey" }}>
+        Get fresh data
+      </button>
+      <br />
+      <br />
       {!isLoading && (
         <CountryCapitalGame
           data={data.reduce((prev, curr) => ({ ...prev, [curr.name.common]: curr.capital[0] }), {})}
