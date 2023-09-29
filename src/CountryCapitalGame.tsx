@@ -50,12 +50,12 @@ const CountryCapitalGame = ({ data }: { data: Record<string, string> }) => {
     if (gameState === "error") {
       setButtonsClicked([{ value, type }]);
     } else {
-      setButtonsClicked((prev: any) => [...prev, { type, value }]);
+      setButtonsClicked((prev: ButtonType[]) => [...prev, { type, value }]);
     }
   };
 
   const isSelected = (value: string, type: string) =>
-    buttonsClicked && buttonsClicked.some((b: any) => b.value === value && b.type === type);
+    buttonsClicked && buttonsClicked.some((b: ButtonType) => b.value === value && b.type === type);
 
   const getBackgroundColor = (value: string, type: string): string => {
     if (!isSelected(value, type) || gameState === "nothing") return "inherit";
