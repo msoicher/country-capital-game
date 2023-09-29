@@ -33,7 +33,12 @@ function App() {
 
   return (
     <div className="w-full text-center align-center m-auto">
-      <h1>Country to Capital Quiz</h1>
+      <h1 style={{ marginBottom: "1rem" }}>Country to Capital Quiz</h1>
+      <a href="https://github.com/msoicher/country-capital-game" target="_blank">
+        View the source code here
+      </a>
+      <br />
+      <br />
       <button onClick={refresh} style={{ backgroundColor: "grey" }}>
         Get fresh data
       </button>
