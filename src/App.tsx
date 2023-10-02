@@ -16,7 +16,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = async () => {
-    const response = await fetch("https://restcountries.com/v3.1/all?fields=name,capital");
+    const response = await fetch("https://restcountries.com/v3.1/independent?fields=name,capital");
     const data = await response.json();
     const upper = Math.floor(Math.random() * (data.length - PAIRS_TO_SHOW + 1)) + PAIRS_TO_SHOW;
     setData(data.slice(upper - PAIRS_TO_SHOW, upper));
