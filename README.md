@@ -27,7 +27,7 @@ Happy matching!
 
 ## Challenges I faced and further reading
 
-# Dynamic Data
+### Dynamic Data
 Before working on the logic I wanted the challenge to have dynamic data so that the same quiz didn't appear each time.
 I found a simple free API called [Rest Countries](https://restcountries.com/). There's lots of endpoints you can hit
 there to get various information about countries such as their language, common and native names, and much more. All I needed was a list of countries 
@@ -48,7 +48,7 @@ The logic in lines 21-22 of `src/App.tsx` grabs that number of pairs we've defin
    ```
 
 
-# Actual Logic of the Challenge
+### Actual Logic of the Challenge
 The logic of the challenge is not too complicated. There are many ways to go about it. I would say my solution is slightly verbose
 since you can see my thinking explicitly in the logic. I try to think about the lifecyle of the challenge:
 1. What is the default state at the start?
