@@ -17,9 +17,11 @@ function App() {
 
   const getData = async () => {
     const response = await fetch("https://restcountries.com/v3.1/independent?fields=name,capital");
-    const data = await response.json();
-    const upper = Math.floor(Math.random() * (data.length - PAIRS_TO_SHOW + 1)) + PAIRS_TO_SHOW;
-    setData(data.slice(upper - PAIRS_TO_SHOW, upper));
+    const countries = await response.json();
+    const randomisedCountries = countries.sort(() => Math.random() - 0.5)
+
+    const upper = Math.floor(Math.random() * (randomisedCountries.length - PAIRS_TO_SHOW + 1)) + PAIRS_TO_SHOW;
+    setData(randomisedCountries.slice(upper - PAIRS_TO_SHOW, upper));
     setIsLoading(false);
   };
 
